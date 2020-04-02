@@ -1,0 +1,39 @@
+\newcommand{\cl}{\text{cl}}
+
+\setcounter{question}{11}  % one less than question number
+\begin{question}[Ewing]
+If $(X,d)$ is the space of real numbers with the usual pseudometric and for each $n\in\Z^{+}, A_n=(1/n,1]$, find $\cl(\cup\{A_n\})$ and $\cup\{\cl(A_n)\}$.
+\end{question}
+
+(a) $\cl(\cup\{A_n\})=[0,1]$
+
+\begin{proof}
+We must show that all and only points in $[0,1]$ are either in $\cup\{A_n\}$ or limit points of $\cup\{A_n\}$. First note that $\cup\{A_n\}$ contains all $1/n$ with $n\in\mathbb{Z}^{+}$ and all real numbers $x$ greater than some $1/n$ and less than or equal to 1. Because we can always find an $n>1/x$ and hence $1/n < x$ for any real number $x\in(0,1]$, this means $\cup\{A_n\}=(0,1]$. Now consider four cases:
+\begin{itemize}
+\item Points $x>1$ are neither in $(0,1]=\cup\{A_n\}$ nor limit points for $\cup\{A_n\}$, since for $\epsilon < x-1$, there are no points $y\in (0,1]$ s.t. $|x-y|<\epsilon$.
+\item All points $x\in(0,1]=\cup\{A_n\}$ are in $\text{cl}(\cup\{A_n\})$ by definition of closure.
+\item The point $x=0$ is a limit point of $\cup\{A_n\}$ and hence in $\text{cl}(\cup\{A_n\})$, since all points $1/n$ are in $\cup\{A_n\}$ and hence for any $\epsilon>0$ we can find a $1/n<\epsilon$ s.t. there is a point $y$ with $1/n < y < \epsilon \le 1$, i.e., $y$ in $\cup\{A_n\}\subset\text{cl}(\cup\{A_n\})$.
+\item All points $x<0$ are neither in $(0,1]=\cup\{A_n\}$ nor limit points for $\cup\{A_n\}$, since for $\epsilon<|x|$ there are no points $y\in (0,1]$, s.t. $|y-x|< \epsilon$.
+\end{itemize}
+
+Therefore all and only points in $[0,1]$ are either elements or limit points of $\text{cl}(\cup\{A_n\})$, i.e., $\text{cl}(\cup\{A_n\})=[0,1]$.
+\end{proof}
+
+(b) $\cup\{\cl(A_n)\} = (0,1]$
+
+\begin{proof}
+Notice that for any $A_n=(1/n,1]$,
+\begin{itemize}
+\item No points $x>1$ are elements of $\text{cl}(A_n)$ or limit points, since for $\epsilon < x-1$, there are no points $y\in (1/n,1]$ s.t. $|x-y|<\epsilon$.
+\item All points $x\in(1/n,1]$ are in that $A_n$ and hence in that $\text{cl}(A_n)$.
+\item The point $x=1/n$ is a limit point of that $A_n$, since for all $\epsilon > 0$ all points $y$ s.t. $1/n < y < \epsilon$ are in  that $A_n$.
+\item All points $x< 1/n$ are neither elements nor limit points of $A_n$, since every element in $A_n$ must be greater than $1/n$ and given any $\epsilon < |x-1/n|$ there can be no $y\in (1/n,1]$ s.t. $|x-y|<\epsilon$.
+\end{itemize}
+
+Thus all and only points in $[1/n,1]$ are either elements or limit points of the corresponding $A_n=(1/n,1]$ and hence $\text{cl}(A_n)=[1/n,1]$. Taking the union of all such $\text{cl}(A_n)$, however, we observe that $n\in\mathbb{Z}^{+}$ implies $0\notin\cup\{\text{cl}(A_n)\}$ and, of course, neither $x< 0$ nor $x>1$ are either, while for every $x\in(0,1]$ we can find $n>1/x$ and hence a $\text{cl}(A_n)$ of which it is an element, making that $x$ also an element of $\cup\{\text{cl}(A_n)\}$. Thus $\cup(\{\text{cl}(A_n)\})=(0,1]$.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

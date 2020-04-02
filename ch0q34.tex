@@ -1,0 +1,15 @@
+\setcounter{question}{33}  % one less than question number
+\begin{question}[Ewing]
+  If sets $A,B$ have cardinalities $n$ and $m$, respectively, then $A\times B$ has cardinality $nm$.
+\end{question}
+
+\begin{proof}
+ First we show that $\Z_n\times\Z_m$ has cardinality $nm$ by demonstrating that the function $h\colon \Z_n\times\Z_m\to\Z_{nm}$ defined by $h(i,j)=im+j$ is both surjective and injective. It is surjective, because for any $y\in\Z_{nm}$ we can find an $(i,j)\in\Z_n\times\Z_m$, as follows: When $y=im+j=0$ we must have $(i,j)=(0,0)\in\Z_n\times\Z_m$, since both $i,j$ are non-negative. For any other $y$, i.e., when $y>0$, Euclid's division algorithm ensures that there are integers $i,j$ s.t. $y=im+j$ with $0\le j<m$, and we know that $0\le i <n$ because $y\in\Z_{nm}$ means $y=im+j<nm$. So for any $y\in\Z_{nm}$ there is an $(i,j)\in\Z_n\times\Z_m$ s.t. $h(i,j)=y$, i.e., $h$ is surjective. It is injective since Euclid's Division algorithm ensures that those integers $i,j$ are unique for each $y=im+j$, i.e., whenever $h(i_1,j_1)=y=h(i_2,j_2)$ we have $i_1 = i_2$ and $j_1 = j_2$. Since $h$ is bijective, $\Z_n\times\Z_m$ is equivalent to $\Z_{nm}$ and so has cardinality $nm$. It therefore suffices to show that $A\times B$ is equivalent to $\Z_n\times\Z_m$.
+
+Since $A,B$ are finite with cardinalities $n,m$, respectively, they are equivalent to $\Z_n,\Z_m$, with bijections $f_A\colon A\to\Z_n$ and $f_B\colon B\to\Z_m$ defined by $f_A(a)=i,\ (a\in A, i\in\Z_n)$ and $f_B(b)=j,\ (b\in B, j\in\Z_m)$. Define $g\colon A\times B\to\Z_n\times\Z_m$ by $g(a,b)=(f_A(a),f_B(b))$. This is surjective, because for every $(i,j)\in\Z_n\times\Z_m$ the bijectivity of $f_A$ and $f_B$ means we have $(i,j)=(f_A(a),f_B(b))$ for some $a\in A$ and a $b\in B$, which gives us an $(a,b)\in A\times B$. Function $g$ is injective, because bijectivity of $f_A$ and $f_B$ means that whenever $g(a_1,b_1)=g(a_2,b_2)$ we have $f_A(a_1)=f_A(a_2)$ and $f_B(b_1)=f_B(b_2)$ and hence $a_1=a_2$ and $b_1=b_2$, i.e. $(a_1, b_1)=(a_2,b_2)$. Since $g$ is bijective, $A\times B$ is equivalent to $\Z_n\times\Z_m$ and we are done.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

@@ -1,0 +1,23 @@
+\setcounter{question}{22} % one less than question number
+\begin{question}[Ewing]
+Let $\mathbf{T}$ be the usual topology and $\mathbf{I}=P(\R-\Q)$. What are $\cl(0,\sqrt{2})$ and $\text{int}([0,\sqrt{2}])$ in $(\R,\mathbf{T}\cup\mathbf{I})$?
+\end{question}
+$\cl(0,\sqrt{2})=[0,\sqrt{2})$
+\begin{proof}
+Since non-rationals are dense in $\R$ and $0\in\R$, any (open) $t\subset\mathbf{T}$ containing 0 meets both $P(\R)$ and $\mathbf{I}$. So $0\in\cl(0,\sqrt{2})$. But since $\sqrt{2}$ is non-rational, the single-element subset $\{\sqrt{2}\}\in P(\mathbf{I})$ and not all $t\subset\mathbf{T}$ containing $\sqrt{2}$ meet both $P(\R)$ and $\mathbf{I}$ in some point $x\ne\sqrt{2}$. So $$\cl(0,\sqrt{2})=(0,\sqrt{2})\cup\{0\}=[0,\sqrt{2})$$
+\end{proof}
+$\text{int}([0,\sqrt{2}])=(0,\sqrt{2}]$
+\begin{proof}
+Since in general $\text{int}(A)=X-\cl(X-A)$, we have
+\begin{align*}
+\text{int}([0,\sqrt{2}]) &= \R-\cl(\R-[0,\sqrt{2}])\\
+&= \R-\cl((-\infty,0)\cup(\sqrt{2},\infty))\\
+&= \R-(\cl(-\infty,0)\cup\cl(\sqrt{2},\infty))
+\end{align*}
+By the same reasoning as in (a) $0\in\cl(-\infty,0)$ and $\sqrt{2}\notin\cl(\sqrt{2},\infty)$. Therefore $$\text{int}([0,\sqrt{2}])=\R-((-\infty,0]\cup(\sqrt{2},\infty]))=(0,\sqrt{2}]$$
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

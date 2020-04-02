@@ -1,0 +1,20 @@
+\setcounter{question}{9}  % one less than question number
+\begin{question}[Fernandez]
+  Let $X$ be the set of real numbers, and let $d$ be the pseudometric given by $d(x,y)=1$ if $x\neq y$ and $d(x,x)=0$ (Example 1.1(e)).
+  \begin{enumerate}
+      \item Describe the closure of the cell $C(0;1)$.
+      \item Describe the set $B(0;1)=\{y\in X:d(0,y)\leq1\}$
+  \end{enumerate}
+\end{question}
+    
+\begin{proof}
+  \begin{enumerate}
+        \item The cell $C(0;1)=\{x:d(0,x)<1\}=\{0\}$. If $d(0,x)<1$ then $x=0$ by definition of the pseudometric. The $d$-derived set $C'(0;1)=\emptyset$ since there are no $d$-limit points of the set. By definition of closure $cl(C(0;1))=C(0;1)\cup C'(0;1)=\{0\}$.
+        \item The set $B(0;1)=\{y\in X:d(0,y)\leq1\}=X$. If $d(0,y)<1$ then $y=0$ and if $d(0,y)=1$ then $y$ is all other real numbers. There fore $B(0;1)=X$
+    \end{enumerate}
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

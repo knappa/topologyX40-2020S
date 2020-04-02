@@ -1,0 +1,29 @@
+\setcounter{question}{3} % one less than question number
+\begin{question}[Fasano]
+  Let $X$ be the plane. For $x=(x_1,x_2)$ and $y=(y_1,y_{2})$, let $\sigma(x,y)=|x_1-y_1|$.
+  \begin{enumerate}
+  \item Show that $\sigma$ is a pseudometric.
+  \item Describe the $\sigma$-cell of radius $r$ centered at the point $(a,b)$.
+  \item Find the $\sigma$-closure of $S=\{ x \in X : x_1^2 + x_2^2 < 1 \}$
+  \end{enumerate}
+\end{question}
+
+\begin{proof}
+ Let $X$ be the plane. For $x=(x_1,x_2)$ and $y=(y_1,y_{2})$, let $\sigma(x,y)=|x_1-y_1|$.
+\begin{enumerate}
+    \item We start by noting that clearly $\sigma(x,y)\geq 0$ for all $x,y \in X$ because of the absolute value. 
+    
+    We next take an arbitrary point $q=(q_1,q_2)$. Then $\sigma(q,q)=|q_1-q_1|=0$. Thus, the $\sigma$-distance between any point and itself is always $0$. 
+    
+    Next, consider the point $r=(r_1,r_2)$. Then by definition $\sigma(q,r)=|q_1-r_1|=|r_1-q_1|=\sigma(r,q)$. Thus, $\sigma$ is commutative. 
+    
+    Finally, we wish to show that the triangle inequality holds for $\sigma$. That is for any points $q=(q_1,q_2)$, $r=(r_1,r_2)$, and $s=(s_1,s_2)$ we wish to show $\sigma(q,s)\leq\sigma(q,r)+\sigma(r,s)$. However, we want to note here that $\sigma$ takes two points in $X$ projects them down onto the horizontal axis and then calculates the distance. Thus, it will suffice to show that the triangle inequality holds for the real numbers: i.e $|x+y|\leq|x|+|y|$. To do this we use:\\ \centerline{$-|x|\leq x\leq|x|$ and $-|y|\leq y\leq|y|$} \\ Adding these together we get: \\ \centerline{$-|x|-|y|\leq x+y\leq|x|+|y|$} \\ which gives us \\  \centerline{$|x+y|\leq||x|+|y||=|x|+|y|$} \\  Since $\sigma$ satisfies the above properties, it is thus a pseudometric.
+    \item By definition, the $\sigma$-cell of radius $r$ centered at the point $p=(a,b)$ is the set $C(p;r)=\{x:\sigma(p,x)<r\}$. Note that our pseudometric $\sigma$ only looks at the first coordinate. That is the difference between $(a,b)$ and $(c,d)$ or $(c,e)$ is the same. That tells us that our cell will have an infinite height, so we must only find the horizontal bounds. Therefore, $C=\{(x,y):a-r<x<a+r, y\in \mathbf{R}\}$
+    \item To find the closure of $S$, we use $cl(S)=S\cup S'$. That is we need to find the limit points of $S$.\newline We first show that the point $p_1=(1,h)$ where $h\in \mathbf{R}$ is a limit point. Let $\epsilon >0$. Then choose $s_1=(1-\frac{\epsilon}{2},0)\in S$. It follows that $\sigma(p_1,s_1)=|1-(1-\frac{\epsilon}{2})|=\frac{\epsilon}{2}<\epsilon$. Thus $p_1=(1,h)$ is a limit point.\newline \newline We can similarly show that $p_2=(-1,h)$ is a limit point choosing $s_2=(-1+\frac{\epsilon}{2},0)$. \newline We now consider any point $p_3=(x_1,h)$ where $-1<x_1<1$. It quite easily follows that $p_3$ is a limit point since we can find an infinite number of distinct points within $S$ that are exactly $0$ $\sigma$-distance away from $p_3$ (i.e. any point in $S$ with $x_1$ as it's first coordinate). \newline Finally, consider $p_4=(x_2,h)$ where $-1>x_2$ or $x_2>1$. Without loss of generality, assume $x_2>1$ (the other case is similar). Then $x_2=1+\alpha$ where $\alpha>0$. But then for $\epsilon=\frac{\alpha}{2}>0$ there doesn't exist any $s \in S$ such that $\sigma(p_4,s)<\epsilon$. Thus $p_4$ cannot be a limit point. From these cases, we have shown that $cl(S)=S\cup S'=\{(x_1,x_2)\in X:|x_1|<1\}$.
+\end{enumerate}
+\end{proof}
+	
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

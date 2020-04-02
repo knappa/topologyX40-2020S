@@ -1,0 +1,13 @@
+\setcounter{question}{11}  % one less than question number
+\begin{question}[Macula]
+Let $f: X \rightarrow Y$ be a function from $X$ onto $Y$, and suppose $B \subset Y$. Prove that $B = f(f^{-1}(B))$.
+\end{question}
+
+\begin{proof}
+Let $a$ be any element in $f^{-1}(B)$. Then $f(a) \in B$, and so $f(f^{-1}(B)) \subset B$. Since $f$ is surjective, $f^{-1}(B)$ contains, for all $b \in B$, at least one element $a$ such that $f(a) = b$, making $B \subset f(f^{-1}(B))$. Thus, $B = f(f^{-1}(B))$.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

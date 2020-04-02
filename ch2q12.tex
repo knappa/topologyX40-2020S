@@ -1,0 +1,18 @@
+\setcounter{question}{11} % one less than question number
+\begin{question}[Ewing]
+Is $\cl(A)=\cl(\text{int}(A))$ true?
+\end{question}
+No.
+\begin{proof}
+Let $A=\Q\subset\R$ with the usual topology. Since the union of every open interval containing a rational is the same as $\R$, as is the union of every open interval containing a non-rational, we have $$\cl(\Q)=\R=\cl(\R-\Q).$$ And since the union of the interior of a subset and the closure of its complement equal the set in the topology, i.e., $X=\cl(X-A)\cup\text{int}(A)$, we also have \begin{align*}
+\text{int}(\Q) &= \R-\cl(\R-\Q)\\
+&= \R-\R\\
+&= \emptyset.
+\end{align*} Therefore $$\cl(\text{int}(\Q))=\cl(\emptyset)=\emptyset.$$
+Hence $\cl(\Q)\ne\cl(\text{int}(\Q))$.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Problem 1.13}
+\author{Gabby Golinski}
+
+\begin{document}
+
+\maketitle
+
+In a pseudometric space, is the intersection of a collection of open sets necessarily an open set?
+
+\bigskip
+
+There are two cases we can deal with for this problem, a finite collection of open sets and an infinite collection of open sets.
+
+\bigskip
+
+First, let's say we are given a finite collection of open sets. We know that a set is open if it is a neighborhood (or open ball) of all its points.
+
+Let $\{O_i\}$ be a finite collection of open sets and S = $\bigcap_{i=1}^{n} O_i$. If S is the empty set then it is open by theorem 1.10a. If S doesn't equal the empty set, then we want to prove that it is open.
+
+Suppose x $\in$ S, then x $\in O_i$ for all i $\in$ I. for each i there exists so $r_i > 0$ so there is some $B(x, r_i) \subset O_i$. We can let r = $min\{r_i\}$ so B(x,r) $\subset B(x,r_i) \subset O_i$ for every i. Therefore B(x,r) $\subset \cap O_i = S$.
+
+This proves that a finite collection of open sets is an open set because we have shows that there is an open ball centered at each point of S and included in S.
+
+\bigskip
+
+Next we want to see if an infinite collection of open sets is open.
+
+An infinite collection of open sets is closed, so I will provide a counterexample.
+
+Take the set S = $\bigcap_{i=1}^\infty (-1/i, 1/i)$. In this case, S = $\{0\}$ which is closed. 
+
+\bigskip
+
+Therefore, we have proved that for a finite collection of open sets the intersection is open, but that this is not necessarily the case for an infinite collection.
+
+\end{document}

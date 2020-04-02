@@ -1,0 +1,12 @@
+\setcounter{question}{4} % one less than question number
+\begin{question}[Ewing]
+If $f\colon (X,d)\to(X,\rho)$ is a Lipschitz function from a pseudometric space to another, i.e. there is a constant $k$ s.t. $\rho(f(x),f(y))\le kd(x,y)$ for all $x,y$ in $X$, then $f$ is continuous.
+\end{question}
+\begin{proof}
+Let $\epsilon>0$. Choose $\delta=\epsilon/k$. Then because $f$ is Lipschitz, when $d(x,y)<\delta=\epsilon/k$ for any $x,y$ in $X$, we have $\rho(f(x),f(y))\le kd(x,y)<k\delta=\epsilon$. By Theorem 3.9, a function between pseudometric spaces is continuous if and only if when points in the domain are within $\delta>0$ of each other their images are within $\epsilon>0$ of each other in the range. Hence $f$ is continuous.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,10 @@
+\setciunter{question}{21}
+
+\begin{question}[Fasano]
+Let $X$ be the plane. For each positive real number $a$, define $B_a=\{(x,y):3x-a<y<3x+a\}$. Show that the collection $\mathbf{B}=\{B_a:a>0\}$ is a base for a topology on the plane. Find the closure of the singleton set consisting of the origin.
+\end{question}
+
+\begin{proof}
+    We consider $B_a=\{(x,y):3x-a<y<3x+a\}$. Then we have \newline \centering $3x-a<y<3x+a$ \newline \centering $-a<y-3x<a$ \newline \centering $|y-3x|<a$. \newline Therefore, for any given point $(x_0,y_0)\in X$ we can use the above inequality to find an $a$ such that $(x_0,y_0)\in B_a$. \newline Next we assume $p\in B_{a_1} \cap B_{a_2}$. Without loss of generality, we can assume $a_1<a_2$. Then $B_{a_1}\cap B_{a_2}=B_{a_2}$ ($B_{a_1}\cap B_{a_2}=B_{a_1}$ if $a_1>a_2$). Thus, $p\in B_{a_2}\subset B_{a_1}\cap B_{a_2}$. Therefore, $\mathb{B}$ is a basis for a topology on the plane. 
+    \newline We next wish to find the closure of the singleton set containing the origin. That is, we wish to find the smallest closed set that contains ${(0,0)}$. It is clear that each $B_a$ is an open set. Thus the only closed sets of the topology are the complements of these elements. But each $B_a$ also contains the origin so none of the complements contain the origin. Thus, the smallest closed set that contains the origin must be all of $X$.
+\end{proof}

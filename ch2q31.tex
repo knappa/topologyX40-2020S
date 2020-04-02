@@ -1,0 +1,11 @@
+\setcounter{question}{30}
+
+\begin{question}[Fasano]
+
+Suppose $(X,\mathbf{T})$ is a topological space and $(A,\mathbf{T_A})$ is a subspace. \newline If $C$ is a subset of $X$, then $Fr_A(C)=A\cap Fr_X(C)$
+
+\end{question}
+
+\begin{proof}
+    This statement is false. We can prove this using the following counterexample. Let $X=\mathbf{R}$, $A=[0,1]$, and $C=(0,1]$. \newline Then, Fr$_A(C)=$ cl$_A(C)$ $\cap $ cl$_A(A-C)=[0,1]\cap \{0\}=\{0\}$ \newline But, Fr$_X(C)$ $\cap$ $A=$ cl$_X(C)$ $\cap$ cl$_X(X-C)$ $\cap$  $A=[0,1]$ $ \cap$ $[(-\infty,0]\cup [1,\infty)]$ $\cap [0,1]=\{0,1\}$. Thus, \center Fr$_A(C)=\{0\} \neq \{0,1\}=$Fr$_X(C)$ $\cap$ $A$.
+\end{proof}

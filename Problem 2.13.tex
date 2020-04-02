@@ -1,0 +1,14 @@
+
+\setcounter{question}{12} % one less than question number
+\begin{question}[Ewing]
+The interior os a set coincides with the interior of its closure.
+\end{question}
+
+\begin{proof}
+This is false as illustrated by the following example. Let $X$ be the space of real numbers with the usual topology and let $A=\mathbf{Q}$. Then int$(\mathbf{Q})=\cup\{U:U\subset A$ and $U$ open$\}$. But because the irrational numbers are dense in the real numbers, we know that any open interval of rationals will contain irrational numbers and thus not be a subset of $A$. Therefore, int$(\mathbf{Q})=\emptyset$. Next, we consider cl$(\mathbf{Q})$ which by the same logic must be all of the real numbers. But int$($cl$(\mathbf{Q}))=\mathbf{R}\neq \emptyset=$int$(\mathbf{Q})$. Thus, the statement is false.
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

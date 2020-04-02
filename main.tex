@@ -1,0 +1,174 @@
+\documentclass[11pt,letterpaper]{amsart}
+
+\usepackage{ifpdf,ifxetex,ifluatex} 
+\ifpdf
+    \typeout{^^J *** PDF mode *** } 
+    \usepackage[protrusion=true,expansion]{microtype}
+    \usepackage[pdftex]{graphicx}
+\else
+    \typeout{^^J *** DVI mode ***} 
+    \usepackage[dvips]{graphicx}
+\fi 
+
+\ifluatex
+    \typeout{ *** LuaLaTeX *** ^^J}
+    \makeatletter
+    \makeatother 
+    % LuaLaTeX specific code
+    \usepackage{unicode-math}
+    \usepackage{lualatex-math}
+\else\ifxetex
+    \typeout{ *** XeLaTeX *** ^^J} 
+    % XeLaTeX specific code
+\else
+    \typeout{ *** LaTeX *** ^^J} 
+\fi\fi 
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{latexsym,amssymb}
+\usepackage{setspace}
+
+\usepackage{fullpage}
+
+%\usepackage{wrapfig}
+
+%\usepackage[font=small,labelfont=bf]{caption}
+%\usepackage{subcaption}
+
+\usepackage[all]{xy}
+\CompileMatrices
+
+\DeclareMathOperator{\Img}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Aug}{Aug}
+\DeclareMathOperator{\Kern}{Kern}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Symp}{Symp}
+\DeclareMathOperator{\Ham}{Ham}
+\DeclareMathOperator{\MCG}{Map}
+\DeclareMathOperator{\del}{\partial}
+\DeclareMathOperator{\delbar}{\overline{\partial}}
+\DeclareMathOperator*{\fibersum}{\#}
+\DeclareMathOperator*{\union}{\cup}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{R}P}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\CPbar}{\overline{\mathbb{C}P}}
+\newcommand{\D}{D}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\into}{\hookrightarrow}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+%\newtheorem{lemma*}{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}{Question}[section]
+
+
+\usepackage{hyperref}
+\hypersetup{%
+  bookmarks=false,%
+  % pdftoolbar=false,%
+  pdffitwindow=true,%
+  pdftitle={Topology},%
+  pdfauthor={Adam C. Knapp, et al.},%
+  pdfnewwindow=true,%
+  colorlinks=false,%
+%  citecolor=black,%
+%  filecolor=black,%
+%  linkcolor=black,%
+%  urlcolor=blue,%
+%  pdfhighlight={/I},%
+}
+
+\makeatother
+
+\title[Topology]%
+{Topology, MATH-440/640\\ Spring 2020}
+
+\author[A. C. K.]{M. Berkowitz, K. Ewing, \\ M. Fasano, I. Fernandez, \\ G. Golinski, S. Hafer, \\
+  O. Kelly, J. Macula, \\ R. Moore, L. Prohovich, \\ and J. Zheng}
+
+\address{American University\\ Washington, DC 20016}
+\email{\href{mailto:knapp@american.edu}{knapp@american.edu}}
+
+\begin{document}
+\ifpdf
+\DeclareGraphicsExtensions{.mps,.pdf,.jpg,.png}
+\else
+\DeclareGraphicsExtensions{.mps,.eps,.ps,.jpg,.png}
+\fi
+
+\bibliographystyle{plain}
+
+\maketitle
+
+\addtocounter{section}{-1}
+\section{Chapter 0}
+
+\input{ch0q4}
+\input{ch0q5}
+\input{ch0q7}
+\input{ch0q12}
+\input{ch0q32}
+\input{ch0q34}
+
+\section{Chapter 1}
+
+\input{ch1q4}
+\input{ch1q5}
+\input{ch1q8}
+\input{ch1q9}
+\input{ch1q10}
+\input{ch1q11}
+\input{ch1q12}
+\input{ch1q13}
+\input{ch1q14}
+\input{ch1q15}
+\input{ch1q17}
+
+\section{Chapter 2}
+
+\input{ch2q3}
+\input{ch2q4}
+\input{ch2q5}
+\input{ch2q6}
+\input{ch2q7}
+\input{ch2q8}
+\input{ch2q9}
+\input{ch2q10}
+\input{ch2q11}
+\input{ch2q12}
+\input{ch2q13}
+\input{ch2q14}
+\input{ch2q15}
+\input{ch2q16}
+\input{ch2q17}
+\input{ch2q18}
+\input{ch2q19}
+\input{ch2q20}
+\input{ch2q21}
+\input{ch2q22}
+\input{ch2q23}
+\input{ch2q24}
+\input{ch2q25}
+\input{ch2q26}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

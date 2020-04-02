@@ -1,0 +1,22 @@
+
+\setcounter{question}{24} % one less than question number
+\begin{question}[Macula]
+
+In Example 2.28(f), find the closure of each base element $B(m, n)$.
+
+\end{question}
+
+\begin{proof}
+Example 2.28(f) defines $B(m, n)$ as follows:
+\bigbreak
+$B(m, n) = {km + n : k \in \mathbb{Z}}$
+\bigbreak
+$B(m, n)$ is therefore the $n\textsuperscript {th}$ equivalence class of the set of integers modulo $m$. (e.g., $B(3, 2)$ is the set of integers whose remainder is 2 when divided by 3.) For any $m \in \mathbb{Z}$, congruence modulo $m$ is an equivalence relation, and any equivalence relation on a given set partitions that set. Therefore, for any $B(m, n)$ and any $p \in \mathbb{Z}$ such that $p \notin B(m, n)$, there exists some $B(m, j), j \neq n$ (i.e., some other equivalence class of integers modulo $m$) such that $p \in B(m, j)$. Since $B(m, j)$ is a base element of the given topology and $B(m, j) \bigcap B(m, n) = \varnothing$ (remember, an equivalence relation partitions a set), it follows from Theorem 2.2.4 in Cain that cl$(B(m, n)) = B(m, n)$. 
+
+
+\end{proof}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,13 @@
+\setcounter{question}{29}  % one less than question number
+\begin{question}[Fernandez]
+  Prove or give a counter example for the following statement. Suppose $(X,T)$ is a topological space and $(A,T_{A})$ is a subspace. If C is a subset of A then $\mbox{int}_{A}(C)=A\cap\mbox{int}_{X}(C)$.
+\end{question}
+    
+\begin{proof}
+    Let $X=\mathbb{C}$, $A=\mathbb{R}$, and $C=[0,1]$. Then $\mbox{int}_{A}(C)=\bigcup\{U|U\in T_{A},U\subset C\}=\emptyset$ and $\mbox{int}_{X}(C)=\bigcup\{U|U\in T_{X},U\subset C\}=(0,1)$. Then $A\cap\mbox{int}_{X}(C)=A\cap\emptyset=A$ which is not equal to $\mbox{int}_{A}(C)=(0,1)$.
+\end{proof}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 
